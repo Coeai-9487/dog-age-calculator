@@ -1,0 +1,79 @@
+/* 全局設定 */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #fff8f0, #ffe6cc);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  transition: background 0.5s;
+}
+
+/* 標題 */
+h1 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+  font-size: 2.2em;
+  text-shadow: 1px 1px 2px #ffa48f;
+  text-align: center;
+}
+
+/* 說明文字 */
+p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* 日期輸入與下拉選單 */
+input[type="date"], select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+input[type="date"]:focus, select:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px #ffb3a7;
+  outline: none;
+}
+
+/* 按鈕 */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: #e55b4d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+/* 結果區塊 */
+#result {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre-line;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid #ff6f61;
+  margin-top: 20px;
+  min-width: 280px;
+  transition: all 0.5s;
+  background-color: #fff3eb;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
