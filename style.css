@@ -43,6 +43,11 @@ p {
     font-size: 16px;
     text-align: center;
     max-width: 500px;
+    /* ⚠️ 新增或修改此行：左右自動外邊距來置中區塊本身 ⚠️ */
+    margin-left: auto;
+    margin-right: auto;
+    /* 或者更簡潔的寫法： */
+    /* margin: 0 auto 25px auto; */ /* 上0 左右auto 下25px */
 }
 
 /* 輸入/選擇群組容器 - 新增的外框樣式 */
