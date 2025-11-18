@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🐶狗狗歲數計算機🦴</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶狗狗歲數計算機🦴</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🐶狗狗歲數計算機🦴</h1>
-  <p>請輸入狗狗的出生日期，選擇體型後按下「開始計算」，即可得出狗狗年齡及換算人類年齡。</p>
+    <div class="container">
+        <h1>🐶狗狗歲數計算機🦴</h1>
+        <p>請輸入狗狗的出生日期，選擇體型後按下「開始計算」，即可得出狗狗年齡及換算人類年齡。</p>
 
-  <input type="date" id="dogBirthdate">
-  <br><br>
-  <label for="dogSize">選擇狗狗體型:</label>
-  <select id="dogSize">
-    <option value="small">小型犬</option>
-    <option value="medium" selected>中型犬</option>
-    <option value="large">大型犬</option>
-    <option value="giant">巨型犬</option>
-  </select>
-  <br><br>
-  <button id="calculateBtn">開始計算</button>
+        <div class="input-group">
+            <label for="dogBirthdate">狗狗出生日期:</label>
+            <input type="date" id="dogBirthdate">
+        </div>
+        
+        <div class="input-group">
+            <label for="dogSize">選擇狗狗體型:</label>
+            <select id="dogSize">
+                <option value="" selected disabled>-- 請選擇體型 --</option> 
+                
+                <option value="small">小型犬</option>
+                <option value="medium">中型犬</option>
+                <option value="large">大型犬</option>
+                <option value="giant">巨型犬</option>
+            </select>
+        </div>
 
-  <div id="result"></div>
+        <button id="calculateBtn">開始計算</button>
 
-  <script src="script.js"></script>
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

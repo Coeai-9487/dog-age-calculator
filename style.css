@@ -1,79 +1,125 @@
 /* 全局設定 */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #fff8f0, #ffe6cc);
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
-  transition: background 0.5s;
+    font-family: 'Arial', sans-serif;
+    /* 背景使用 Unsplash 狗狗圖片，並設置覆蓋和固定 */
+    background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b');
+    background-size: cover; /* 圖片覆蓋整個視口 */
+    background-position: center; /* 圖片居中 */
+    background-attachment: fixed; /* 背景固定，不隨滾動條移動 */
+    
+    /* 調整背景色，讓內容區塊更清晰 */
+    background-color: #fff8f0;
+    
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    transition: background 0.5s;
+}
+
+/* 為了讓文字在圖片背景上更清晰，我們為主要內容添加一個透明白色背景容器 */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* 透明白色背景 */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
 }
 
 /* 標題 */
 h1 {
-  color: #ff6f61;
-  margin-bottom: 10px;
-  font-size: 2.2em;
-  text-shadow: 1px 1px 2px #ffa48f;
-  text-align: center;
+    color: #ff6f61;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 3px #ffa48f; /* 增強陰影讓文字更突出 */
+    text-align: center;
 }
 
 /* 說明文字 */
 p {
-  margin-bottom: 25px;
-  font-size: 16px;
-  text-align: center;
-  max-width: 500px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* 輸入/選擇群組容器 - 新增的外框樣式 */
+.input-group {
+    border: 2px solid #ff6f61;
+    border-radius: 15px; /* 圓角 */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff3eb; /* 輕微的背景色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: fit-content; /* 寬度配合內容 */
+    display: flex; /* 使用 flex 排列內容 */
+    flex-direction: column;
+    align-items: flex-start; /* 左對齊 */
 }
 
 /* 日期輸入與下拉選單 */
 input[type="date"], select {
-  padding: 10px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: all 0.3s;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px; /* 調整為 10px */
+    margin-top: 5px; /* 與 label 隔開 */
+    transition: all 0.3s;
+    width: 250px; /* 設定固定寬度 */
+    box-sizing: border-box; /* 確保 padding/border 不增加總寬度 */
 }
 
+/* 移除 input-group 內部元素的額外邊距，由 input-group 統一控制 */
+.input-group input[type="date"], .input-group select {
+    margin-bottom: 10px;
+}
+.input-group label {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+
 input[type="date"]:focus, select:focus {
-  border-color: #ff6f61;
-  box-shadow: 0 0 5px #ffb3a7;
-  outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px #ffb3a7;
+    outline: none;
 }
 
 /* 按鈕 */
 button {
-  padding: 12px 25px;
-  font-size: 16px;
-  background-color: #ff6f61;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
 }
 
 button:hover {
-  background-color: #e55b4d;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+    background-color: #e55b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
 }
 
 /* 結果區塊 */
 #result {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  white-space: pre-line;
-  padding: 15px 20px;
-  border-radius: 12px;
-  border: 2px solid #ff6f61;
-  margin-top: 20px;
-  min-width: 280px;
-  transition: all 0.5s;
-  background-color: #fff3eb;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    white-space: pre-line;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 2px solid #ff6f61;
+    margin-top: 20px;
+    min-width: 280px;
+    transition: all 0.5s;
+    background-color: #fff3eb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
