@@ -90,7 +90,7 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
         
         switch(size) {
             case 'small':  k = 18; break; // 小型犬
-            case 'medium': k = 20; break;
+            case 'medium': k = 20; break; // 中型犬
             case 'large':  k = 23; break; // 大型犬
             case 'giant':  k = 25; break; // 巨型犬
         }
